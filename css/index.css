@@ -1,0 +1,226 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+ * {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+    box-sizing: border-box;
+    
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    
+    
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size:100%;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    width:100%;
+    color:#444444;
+    height: 100vh;
+
+    background: -moz-linear-gradient(top, #e8eaf6 0%, #c5cae9 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e8eaf6), color-stop(100%,#c5cae9)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #e8eaf6 0%,#c5cae9 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #e8eaf6 0%,#c5cae9 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #e8eaf6 0%,#c5cae9 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #e8eaf6 0%,#c5cae9 100%); /* W3C */
+}
+
+/* Portrait layout (default) */
+.app {
+
+}
+
+h1{
+    text-align: center;
+    color:white;
+}
+a{
+    text-decoration: none;
+    color:white;
+}
+
+.page{
+    position: absolute;
+    top: 0;bottom: 0;
+    width: 100%;
+    /* margin: auto; */
+    padding: 40px;
+    padding-top: 60px;
+
+}
+
+.pageWrapper{
+    height: 100%;
+}
+
+.pagehome{
+    background-color: #009CC0;
+
+}
+
+.pageintro{
+    background-color: #4E69A2;
+}
+
+
+
+.header{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 50px;
+    background-color: #33478F;
+    z-index:9999;
+}
+
+a.header-icon-menu{
+    display: block;
+    position: absolute;
+    line-height: 55px;
+    color:white;
+    font-size:2rem;
+    padding-left:15px;
+}
+
+.header-title-app{
+    text-align: center;
+    line-height: 50px;
+    color:white;
+}
+
+.menu-panel{
+    position:absolute;
+    top: 50px;bottom: 0;
+    width: 85%;
+    z-index: 8999;
+    background-color: #218AB5;
+    padding:20px;
+    color:white;
+    -webkit-box-shadow: 1px 0px 5px 2px #656565;
+}
+
+.menu-panel.menuClosed{
+    -webkit-transition:ease 0.5s;
+    -webkit-transform:translate3d(-104%,0,0);
+}
+.menu-panel.menuOpened{
+    -webkit-transition:ease 0.5s;
+    -webkit-transform:translate3d(0%,0,0);
+}
+
+.menu ul{
+    list-style-type: none;
+}
+
+.menu ul li{
+    float: left;
+}
+
+a.button{
+    display: block;
+    width:80%;
+    margin:auto;
+    padding: 10px;
+    background-color: #7B7ED3;
+    color:#E0E0E0;
+    text-align: center;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -moz-box-shadow: 0px 3px 0px 0px #6665cd;
+    -webkit-box-shadow: 0px 3px 0px 0px #6665cd;
+    -o-box-shadow: 0px 3px 0px 0px #6665cd;
+    box-shadow: 0px 3px 0px 0px #6665cd;
+}
+
+a.button.left{
+    width:49%;
+    float: left;
+}
+a.button.right{
+    width:49%;
+    float: right;
+}
+
+
+
+* {
+    font-family: 'Droid Sans', sans-serif;
+}
+body {
+    overflow:hidden;
+    margin:0;
+    padding:0;
+}
+
+.content {
+    position: absolute;
+    width:100%;
+}
+
+
+.next .ng-enter{
+    -webkit-transition: 0.5s ease-out all;
+    -webkit-transform: translate3d(100%,0,0);
+}
+.next .ng-enter.ng-enter-active{
+    -webkit-transform: translate3d(0,0,0);
+}
+
+.next .ng-leave{
+    -webkit-transition: 0.5s ease-out all;
+    -webkit-transform: translate3d(0,0,0);
+}
+
+.next .ng-leave.ng-leave-active{
+    -webkit-transform: translate3d(-100%,0,0);
+
+}
+
+.back .ng-enter{
+    -webkit-transition: 0.5s ease-out all;
+    -webkit-transform: translate3d(-100%,0,0);
+
+}
+
+.back .ng-enter.ng-enter-active{
+    -webkit-transform: translate3d(0%,0,0);
+
+}
+
+.back .ng-leave{
+    -webkit-transition: 0.5s ease-out all;
+    -webkit-transform: translate3d(0%,0,0);
+
+}
+.back .ng-leave.ng-leave-active{
+    -webkit-transition: 0.5s ease-out all;
+    -webkit-transform: translate3d(100%,0,0);
+}
+
+.logoPartenaire{
+    text-align: center;
+margin-top: 30px;
+}
+

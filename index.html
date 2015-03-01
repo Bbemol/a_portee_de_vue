@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=medium-dpi" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" href="css/pe-icon-7-stroke.css">
+    
+    <title>À portée de vue</title>
+</head>
+<body ng-app="demo" onload="onLoad()">
+    <div ng-controller="MenuPanelCtrl">
+        <!-- <ul>
+            <li>Jeu</li>
+            <li>Règles</li>
+            <li>Plan</li>
+            <li>Crédits</li>
+        </ul> -->
+        <div class="menu-panel {{menuClassOpen}}">
+            <p>Hello</p>
+
+        </div>
+        <div class="header">
+            <a class="header-icon-menu" ng-dblclick="return false;" ng-click="openCloseMenu()">
+                <i class="pe-7s-menu"></i>
+            </a>
+            <div class="header-title-app">
+                À portée de vue
+            </div>
+        </div>
+        
+    </div>
+    <div class="pageWrapper {{pageClass}}" ng-controller="PageViewCtrl">
+        <div class="content" ng-view></div>
+    </div>
+
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-animate.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>
